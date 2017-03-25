@@ -5,4 +5,4 @@ App Package can be found [here](https://drive.google.com/open?id=0B5KaKc3zJIuPeD
 To install:   
 First install the certificate, followed by dependencies and then install the appxbundle.  
 
-![Promo](https://github.com/mahimg/Passave/blob/master/Promo/promo.gif)
+![Promo](https://github.com/mahimg/Passave/blob/master/promo/promo.gif)
