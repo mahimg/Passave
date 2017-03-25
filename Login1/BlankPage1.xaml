@@ -1,0 +1,90 @@
+﻿<Page
+    x:Class="Login1.BlankPage1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Login1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <Color x:Key="Color1">#FF7E4FEC</Color>
+        <Color x:Key="Bordertextbox">#FF5A27B2</Color>
+    </Page.Resources>
+
+    <Grid>
+        <Grid.Background>
+            <SolidColorBrush Color="{StaticResource Color1}"/>
+        </Grid.Background>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="41,50,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="85" Width="492" FontFamily="Segoe UI Semilight" FontStyle="Italic" FontSize="45"/>
+        <TextBox x:Name="textBox" PlaceholderText="Name of Account" HorizontalAlignment="Left" Margin="67,240,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="214">
+            <TextBox.BorderBrush>
+                <SolidColorBrush Color="{StaticResource Bordertextbox}"/>
+            </TextBox.BorderBrush>
+        </TextBox>
+        <TextBox x:Name="textBox1" PlaceholderText="Username" HorizontalAlignment="Left" Margin="67,298,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="214">
+            <TextBox.BorderBrush>
+                <SolidColorBrush Color="{StaticResource Bordertextbox}"/>
+            </TextBox.BorderBrush>
+        </TextBox>
+        <Button x:Name="button" Content="Save" HorizontalAlignment="Left" Margin="230,425,0,0" VerticalAlignment="Top" Click="button_Click" RenderTransformOrigin="1.636,0.573"/>
+        <PasswordBox x:Name="passwordBox" PlaceholderText="Password" HorizontalAlignment="Left" Margin="67,359,0,0" VerticalAlignment="Top" Width="214">
+            <PasswordBox.BorderBrush>
+                <SolidColorBrush Color="{StaticResource Bordertextbox}"/>
+            </PasswordBox.BorderBrush>
+        </PasswordBox>
+
+        <ListView x:Name="listView" HorizontalAlignment="Left" Height="509" Margin="786,174,0,0" VerticalAlignment="Top" Width="345">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding Site}" 
+                           Margin="20,0,20,8"
+                           FontSize="24" 
+                           FontStyle="Italic" 
+                           FontWeight="SemiBold"
+                           Foreground="DarkBlue" />
+                        <TextBlock Text="{Binding SiteUsername}" 
+                           Margin="20,0,20,8"
+                           FontSize="16"
+                           Foreground="DarkRed" 
+                           Opacity="0.8" />
+                        <TextBlock Text="{Binding Password}" 
+                           Margin="20,0,20,8"
+                           FontSize="16"
+                           Foreground="DarkSlateBlue" 
+                           Opacity="0.8" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button x:Name="button2" Content="Display" HorizontalAlignment="Left" Margin="208,576,0,0" VerticalAlignment="Top" Width="73" Click="button2_Click"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="67,174,0,0" TextWrapping="Wrap" Text="Save Password," VerticalAlignment="Top" Height="41" Width="322" FontSize="33" FontFamily="Segoe UI Light"/>
+        <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="67,520,0,0" TextWrapping="Wrap" Text="Show Passwords," VerticalAlignment="Top" Height="49" Width="214" FontFamily="Segoe UI Light" FontSize="25"/>
+        <TextBox x:Name="textBox2" PlaceholderText="Notes"  HorizontalAlignment="Left" Height="151" Margin="389,240,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="285" InputScope="Text">
+            <TextBox.BorderBrush>
+                <SolidColorBrush Color="{StaticResource Bordertextbox}"/>
+            </TextBox.BorderBrush>
+        </TextBox>
+        <Button x:Name="button1" Content="Save" HorizontalAlignment="Left" Margin="623,425,0,0" VerticalAlignment="Top" Click="button1_Click"/>
+        <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="394,174,0,0" TextWrapping="Wrap" Text="Save Notes," VerticalAlignment="Top" Height="41" Width="322" FontSize="33" FontFamily="Segoe UI Light"/>
+        <Button x:Name="button3" Content="Display" HorizontalAlignment="Left" Margin="606,576,0,0" VerticalAlignment="Top" Click="button3_Click"/>
+        <TextBlock x:Name="textBlock2_Copy" HorizontalAlignment="Left" Margin="394,520,0,0" TextWrapping="Wrap" Text="Show Notes," VerticalAlignment="Top" Height="49" Width="214" FontFamily="Segoe UI Light" FontSize="25"/>
+        <ListView x:Name="listView1" HorizontalAlignment="Left" Height="509" Margin="786,174,0,0" VerticalAlignment="Top" Width="465">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding Notes}" 
+                           Margin="20,0,20,8"
+                           FontSize="20"
+                           Foreground="LightBlue" 
+                           
+                           Opacity="1" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <TextBlock x:Name="textBlockx" HorizontalAlignment="Left" Margin="786,105,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="41" Width="322" FontSize="33" FontFamily="Segoe UI Semibold" FontWeight="Bold"/>
+        
+
+    </Grid>
+</Page>

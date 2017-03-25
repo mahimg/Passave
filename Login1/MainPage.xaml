@@ -1,0 +1,41 @@
+﻿<Page 
+   x:Class = "Login1.MainPage" 
+   xmlns = "http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+   xmlns:x = "http://schemas.microsoft.com/winfx/2006/xaml" 
+   xmlns:local = "using:Login1" 
+   xmlns:d = "http://schemas.microsoft.com/expression/blend/2008" 
+   xmlns:mc = "http://schemas.openxmlformats.org/markup-compatibility/2006" 
+   mc:Ignorable = "d">
+    <Page.Resources>
+        <Color x:Key="textboxBG">#FFA36AD3</Color>
+    </Page.Resources>
+
+    <Grid RequestedTheme="Dark" Background="#FF7E4FEC" >
+        <Button x:Name = "Retrieve" Content = "Login" HorizontalAlignment = "Left"  
+         VerticalAlignment = "Top" Margin = "661,406,0,0"  
+         Click = "Retrieve_Click"/>
+
+        <Button x:Name = "Add" Content = "Register" HorizontalAlignment = "Left"  
+         VerticalAlignment = "Top" Margin = "539,406,0,0" Click = "Add_Click"/>
+
+        <TextBox x:Name = "textBox" PlaceholderText="Username" HorizontalAlignment = "Left" TextWrapping = "Wrap"  
+         VerticalAlignment = "Top" Margin = "513,280,0,0" Width = "239" BorderBrush="#FF5A27B2" Background="Black">
+            <TextBox.Foreground>
+                <SolidColorBrush Color="{StaticResource textboxBG}"/>
+            </TextBox.Foreground>
+        </TextBox>
+
+        <PasswordBox x:Name = "textBox1" PlaceholderText="Password" HorizontalAlignment = "Left"
+         VerticalAlignment = "Top" Margin = "513,342,0,0" Width = "239" BorderBrush="#FF5A27B2">
+            <PasswordBox.Foreground>
+                <SolidColorBrush Color="{StaticResource textboxBG}"/>
+            </PasswordBox.Foreground>
+        </PasswordBox>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="546,188,0,0" TextWrapping="Wrap" Text="Passave" VerticalAlignment="Top" Height="87" Width="239" RequestedTheme="Dark" Foreground="#FF0E0B46" FontSize="50" FontFamily="Palatino Linotype"/>
+        <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" Margin="513,374,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="27" Width="239"/>
+
+
+
+    </Grid>
+
+</Page>	
